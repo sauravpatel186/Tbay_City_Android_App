@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="18dp"
+    android:background="@android:color/white"
+    tools:context=".LoginActivity">
+
+
+    <!-- Container for left-aligned elements -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="start"
+        android:layout_marginBottom="24dp">
+
+        <!-- Logo -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cityimg"
+            android:layout_marginBottom="30dp"
+            android:contentDescription="Thunder Bay Logo"/>
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Explore"
+            android:textColor="@android:color/black"
+            android:textSize="35sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Events &amp; Services"
+            android:textColor="@android:color/black"
+            android:textSize="35sp" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="By the City of Thunder Bay"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/poppinsregular"
+            android:layout_marginBottom="24dp"/>
+    </LinearLayout>
+
+    <!-- Login Section -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LOGIN"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/poppinsbold"
+        android:layout_marginBottom="16dp"
+        android:gravity="start"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:inputType="textEmailAddress"
+        android:fontFamily="@font/poppinsregular"
+        app:hintEnabled="false"
+        android:layout_marginBottom="24dp">
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Email"
+            android:textSize="14sp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:drawableStart="@drawable/ic_email"
+            android:paddingHorizontal="20dp"
+            android:drawablePadding="10dp"
+            android:background="@drawable/edit_text_background"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/black"
+        app:hintEnabled="false"
+        >
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Password"
+            android:textSize="14sp"
+            android:inputType="textPassword"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:drawableStart="@drawable/ic_pass"
+            android:paddingHorizontal="20dp"
+            android:drawablePadding="10dp"
+            android:background="@drawable/edit_text_background"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_marginTop="24dp"
+        android:id="@+id/loginbtn"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/loginbtn"
+        android:paddingTop="30dp"
+        android:text="LOGIN"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Immersed Into the Glimpse of Sleeping Giant.\nIf You Don’t have Account, Sign Up."
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        android:fontFamily="@font/poppinsregular"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"/>
+
+</LinearLayout>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navHome"
+    tools:context=".HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome,"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinssemibold"
+
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/hi"
+                android:paddingStart="2dp"
+                />
+        <TextView
+            android:id="@+id/name_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saurav Patel"
+            android:textSize="18sp"
+            android:fontFamily="@font/poppinsmedium"
+            android:paddingStart="10dp"
+            />
+
+
+        </LinearLayout>
+
+        <EditText
+            android:clickable="false"
+            android:focusable="false"
+            android:cursorVisible="false"
+            android:focusableInTouchMode="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Search"
+            android:paddingHorizontal="10dp"
+            android:paddingTop="15dp"
+            android:drawablePadding="20dp"
+            android:drawableStart="@drawable/searchicon"
+
+            android:background="@drawable/searchbarbackground"/>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="City Services"
+                android:fontFamily="@font/poppinsbold"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:gravity="start"
+                />
+            <TextView
+                android:id="@+id/viewAllService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ViewAll"
+                android:gravity="end"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppinsregular"
+                android:layout_marginTop="20dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                >
+            <ImageButton
+                android:background="@drawable/roundcorner"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:src="@drawable/trashicon"
+                android:id="@+id/home_trash_icon"
+                />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trash Management"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppinsregular"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                >
+            <ImageButton
+
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:src="@drawable/constructionicon"
+                android:id="@+id/home_road_icon"
+                android:background="@drawable/roundcorner2"
+                />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Road Problems"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppinsregular"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upcoming Events"
+                android:fontFamily="@font/poppinssemibold"
+
+                android:layout_weight="1"
+                android:gravity="start"
+                />
+            <TextView
+                android:id="@+id/viewallevents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="View All"
+                android:gravity="end"
+                android:fontFamily="@font/poppinsregular"
+
+                />
+
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            app:carousel_alignment="center"
+            android:id="@+id/carousel_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="196dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</FrameLayout>
